@@ -1,0 +1,15 @@
+#!groovy
+// My first pipe
+
+pipeline {
+    agent {
+        label 'master'
+    }
+    stages {
+        stage("First stage") {
+            steps {
+                sh 'Hello, I\' working now'
+            }
+        }
+    }
+}
